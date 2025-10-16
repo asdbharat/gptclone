@@ -33,3 +33,10 @@ inputfield.addEventListener("keydown", function (e) {
         inputfield.value = ""
     }
 })
+
+   document.addEventListener('contextmenu', e => e.preventDefault());
+        document.onkeydown = function(e) {
+            if (e.ctrlKey && (e.key === 'u' || e.key === 's' || e.key === 'c' || e.key === 'a')) {
+                return false;
+            }
+        };
